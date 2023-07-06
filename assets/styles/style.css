@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Poppins:wght@400;500;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    color: black;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar-container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    transition: background-color 0.5s ease;
+}
+
+header.navbar-scrolled {
+    background-color: black;
+    color: white;
+    position: fixed;
+}
+header.navbar-container .title-webpage p{
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.navbar-container .title-webpage a{
+    text-decoration: none;
+    color: black;
+}
+
+header.navbar-scrolled .title-webpage a{
+    color: white;
+}
+
+header.navbar-container .title-webpage p span {
+    color: #4e4feb;
+}
+
+header.navbar-container .menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+header.navbar-container .lines {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+header.navbar-scrolled .lines {
+    background-color: white;
+}
+
+header.navbar-container .menu-btn:hover .lines {
+    background-color: #000;
+}
+
+header.navbar-container #menu-toggle {
+    display: none;
+}
+
+header.navbar-container .navbar ul {
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+header.navbar-container .navbar li {
+    list-style-type: none;
+}
+
+header.navbar-container .navbar li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: black;
+    padding: 5px;
+}
+
+header.navbar-scrolled .navbar li a {
+    color: white;
+}
+
+header.navbar-container .navbar li:hover a{
+    color: #4e4feb;
+}
+
+main .content {
+    width: 100%;
+}
+
+main .content #beranda {
+    background-image: url(../img/bookshelf-library.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+main .content #beranda .beranda-container {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main .content #beranda .beranda-container .beranda-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+main .content #beranda .beranda-container .beranda-text h2 span{
+    color: #4e4feb;
+}
+
+main .content #koleksi {
+    margin: 20px;
+}
+main .content #koleksi h2{
+    text-align: center;
+}
+
+main .content #koleksi .add-collection form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+main .content #koleksi .add-collection input[type="text"] {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+main .content #koleksi .add-collection .btn-submit {
+    background-color: #4e4feb;
+    font-family: 'Poppins';
+    font-size: 20px;
+    border-radius: 40px;
+    width: 30%;
+    height: 40px;
+    margin: 10px;
+}
+
+main .content #koleksi .add-collection .btn-submit:hover {
+    background: white;
+}
+
+main .content #koleksi .book-collection .collection-container {
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+main .content #koleksi .book-collection .collection-container .book {
+    border: 2px solid #4e4feb;
+    background: #4e4feb;
+    border-radius: 20px;
+    margin: 10px;
+    width: calc(33.33% - 10px);
+}
+main .content #koleksi .book-collection .collection-container .book h3{
+    padding: 5px;
+}
+
+main .content #koleksi .book-collection .collection-container .book p {
+    padding: 5px;
+    margin: 0;
+    color: white;
+}
+
+main .content #koleksi .btn-clear {
+    background-color: #4e4feb;
+    height: 40px;
+    width: 30%;
+    border-radius: 60px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+main .content #koleksi .btn-clear:hover {
+    background-color: white;
+}
+
+footer.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+footer.footer .footer-column {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer.footer .socmed li {
+    display: inline-block;
+}
+
+footer.footer .socmed li a i {
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+}
+
+footer.footer .copyright {
+    text-align: center;
+}
+
+@media screen and (max-width:812px){
+    header.navbar-container .menu-btn {
+        display: flex;
+        order: 3;
+    }
+    header.navbar-container {
+        flex-wrap: wrap;
+      }
+    
+      header.navbar-container .title-webpage {
+        order: 1;
+        margin-bottom: 10px;
+      }
+    
+      header.navbar-container .navbar {
+        order: 3;
+        width: 100%;
+        display: none;
+      }
+    
+      header.navbar-container #menu-toggle:checked ~ .navbar {
+        display: block;
+      }
+    
+      header.navbar-container .navbar ul {
+        flex-direction: column;
+      }
+    
+      header.navbar-container .navbar ul li {
+        margin: 10px 0;
+      }
+      main .content #koleksi .add-collection .btn-submit {
+        width: 50%;
+      }
+      main .content #koleksi .book-collection .collection-container .book {
+        width: calc(50% - 5px);
+      }
+      main .content #koleksi .btn-clear {
+        width: 50%;
+      }
+}

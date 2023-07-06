@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Library</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar-container">
+        <div class="title-webpage">
+          <p><a href="#beranda">Pustaka<span>Ku</span></a></p>
+        </div>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-btn">
+              <span class="lines"></span>
+              <span class="lines"></span>
+              <span class="lines"></span>
+            </label>
+            <nav class="navbar">
+              <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#koleksi">Koleksi</a></li>
+                <li><a href="#about me">Tentang Saya</a></li>
+              </ul>
+            </nav>
+      </header>
+      
+    <!-- End of Navbar -->
+    <!-- Main Content -->
+    <main>
+        <div class="content">
+            <div id="beranda">
+                <div class="beranda-container">
+                    <div class="beranda-text">
+                        <h2>Pustaka<span>Ku</span></h2>
+                        <p>Web untuk mengelola koleksi buku Anda</p>
+                    </div>
+                </div>
+            </div>
+            <div id="koleksi">
+                <h2>Koleksi</h2>
+                <div class="add-collection">
+                    <h3>Tambah koleksi</h3>
+                    <form action="#" id="form">
+                        <div class="form-input">
+                            <label for="title">Judul Buku</label> <br>
+                            <input type="text" name="title" id="title" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="author">Penulis Buku</label> <br>
+                            <input type="text" name="author" id="author" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="year">Tahun Terbit</label> <br>
+                            <input type="text" name="year" id="year" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="isFinished">Status Baca : </label> <br>
+                            <input type="radio" id="sudah" name="isFinished" value="Sudah Selesai" required>
+                            <label for="sudah">Sudah Selesai</label>
+                            <input type="radio" id="belum" name="isFinished" value="Belum Selesai" required>
+                            <label for="belum">Belum Selesai</label>
+                        </div>
+                        <input class="btn-submit" type="submit" name="Submit" value="Tambah">
+                    </form>
+                </div>
+                <div class="book-collection">
+                    <h3>Koleksi tersedia</h3>
+                    <div class="collection-container" id="bookList">
+                    </div>
+                </div>
+                <div id="btn-clear">
+                    <input class="btn-clear" type="submit" name="Clear" value="Hapus Koleksi">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- End of Main Content -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-column">
+            <div id="about me">
+                <h2>Tentang Saya</h2>
+                <p>Dzulfikri Adjmal <br> Universitas Pembangunan Nasional "Veteran" Jakarta <br> Jakarta, Indonesia</p>
+            </div>
+            <div class="socmed">
+                <h2>Hubungi Saya</h2>
+                <ul>
+                    <li><a href="mailto:dzulfikriadjmal@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                    <li><a href="https://www.instagram.com/dzoel.31/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/Dzoel31" target="_blank"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">copyright &copy; Dzulfikri Adjmal 2023</p>
+    </footer>
+    <!-- End of Footer -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
